@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>three</title>
+</head>
+
+<body>
+    <div>
+        <form>
+            <div>
+                <label for="name">Your Name</label>
+                <input type="text" name="username" id="name" 
+                placeholder="John007" 
+                title="username must be > 4 letters"
+                pattern="[A-Za-z0-9]{4,}">
+            </div>
+            <div>
+                <input type="checkbox" name="accept" id="accept_cb">
+                <label for="accept_cb">Do you accept?</label>
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" 
+                required autocomplete="off" 
+                value="xaidmetamorpho@gmail.com" disabled>
+            </div>
+            <input type="color" name="favcolor">
+            <input type="date" name="dob">
+            <input type="datetime-local" name="dobdate">
+            <input type="file" name="image">
+            <input type="hidden" name="pin" value="1245">
+            <input type="image" src="https://dev-to-uploads.s3.amazonaws.com/i/00g7uw9dfcb80pq2hikz.png" width="100">
+            <div>
+                <input type="radio" name="gender" value="M" id="male">
+                <label for="male">Male</label>
+            </div>
+            <div>
+                <input type="radio" name="gender" value="F" id="female" checked>
+                <label for="female">Female</label>
+            </div>
+            <div>
+                <input type="radio" name="gender" value="O" id="other">
+                <label for="other">Other</label>
+            </div>
+            <!-- home work -->
+            <!-- test other input types by yourself -->
+            
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+
+</html>
