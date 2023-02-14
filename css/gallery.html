@@ -12,7 +12,7 @@
     <style>
         .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-template-columns: repeat(3, minmax(300px, 1fr));
             gap: 2rem;
         }
 
@@ -28,15 +28,33 @@
             display: flex;
             flex-flow: row nowrap;
             align-items: flex-start;
-            justify-content: center;
-            background-color: blanchedalmond;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+            overflow-x: hidden;
         }
 
         h1 {
             margin: 0;
             padding: 0;
-            background-color: aquamarine;
             font-size: 1.3rem;
+            white-space: nowrap;
+        }
+
+        .head i {
+            padding-right: 1rem;
+        }
+        a{
+            width: 8rem;
+            padding: .5rem;
+            background-color: #000;
+            color: white;
+            border-radius: 3px;
+            border: none;
+            text-align: center;
+        }
+        a:hover, a:focus{
+            background-color: #f37628;
         }
     </style>
 </head>
@@ -45,16 +63,19 @@
     <div class="gallery">
         <div class="card">
             <div class="head">
-                <i class="fa fa-user fa-2x"></i>
+                <i class="fa fa-user"></i>
                 <h1>Lorem, ipsum dolor.</h1>
             </div>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, nulla. Eligendi vero commodi, modi
                 eveniet blanditiis in delectus a ab dicta, doloribus officiis ut tempora amet cupiditate pariatur animi
                 minima!</p>
+            <a>
+                Read more <i class="fa-solid fa-arrow-right"></i>
+            </a>
         </div>
         <div class="card">
             <div class="head">
-                <i class="fa fa-user fa-2x"></i>
+                <i class="fa fa-user"></i>
                 <h1>Rem, amet rerum!</h1>
             </div>
             <p>Praesentium, nam nostrum blanditiis vero vitae numquam est officia! In enim voluptates voluptatum, animi,
@@ -63,7 +84,7 @@
         </div>
         <div class="card">
             <div class="head">
-                <i class="fa fa-user fa-2x"></i>
+                <i class="fa fa-user"></i>
                 <h1>Maiores, fugiat accusantium?</h1>
             </div>
             <p>Culpa nisi nulla facilis? Enim perspiciatis facere rerum cupiditate aliquid suscipit eos, maxime id
@@ -72,7 +93,7 @@
         </div>
         <div class="card">
             <div class="head">
-                <i class="fa fa-user fa-2x"></i>
+                <i class="fa fa-user"></i>
                 <h1>Corporis, vel ipsam.</h1>
             </div>
             <p>Nihil, doloribus. Quos ab quo ipsum beatae. Optio dolore quae impedit quidem, molestias blanditiis
@@ -81,7 +102,7 @@
         </div>
         <div class="card">
             <div class="head">
-                <i class="fa fa-user fa-2x"></i>
+                <i class="fa fa-user"></i>
                 <h1>Tempora, suscipit maiores.</h1>
             </div>
             <p>Saepe molestias magnam, vitae, dignissimos necessitatibus culpa sint provident blanditiis vero fugiat
@@ -90,7 +111,7 @@
         </div>
         <div class="card">
             <div class="head">
-                <i class="fa fa-user fa-2x"></i>
+                <i class="fa fa-user"></i>
                 <h1>Neque, laudantium sed?</h1>
             </div>
             <p>Ex molestiae corporis ipsa sint blanditiis. Modi animi veniam corporis aspernatur ad accusantium,
@@ -99,7 +120,7 @@
         </div>
         <div class="card">
             <div class="head">
-                <i class="fa fa-user fa-2x"></i>
+                <i class="fa fa-user"></i>
                 <h1>Qui, tenetur accusantium?</h1>
             </div>
             <p>Itaque fugit deleniti non doloremque commodi! Mollitia ratione deleniti optio iste in labore fugit
@@ -108,7 +129,7 @@
         </div>
         <div class="card">
             <div class="head">
-                <i class="fa fa-user fa-2x"></i>
+                <div><i class="fa fa-user"></i></div>
                 <h1>Enim, quod animi.</h1>
             </div>
             <p>Neque sapiente libero omnis quasi molestiae esse inventore, cumque quaerat nostrum adipisci quis nobis
@@ -117,7 +138,7 @@
         </div>
         <div class="card">
             <div class="head">
-                <i class="fa fa-user fa-2x"></i>
+                <div><i class="fa fa-user"></i></div>
                 <h1>Nihil, odit sit.</h1>
             </div>
             <p>Reiciendis ea, soluta quaerat iure dicta aliquam aperiam cum? Voluptatem, distinctio ratione ipsa dolores
