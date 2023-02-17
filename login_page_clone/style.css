@@ -164,7 +164,7 @@ hr{
     font-size: 1.2rem;
 }
 
-/* media query */
+/* media query for tablet*/
 @media screen and (max-width: 768px){
     main{
         flex-direction: column-reverse;
@@ -174,5 +174,24 @@ hr{
     }
     .left{
         padding: 1rem;
+    }
+}
+
+/* media query for mobile */
+@media screen and (max-width: 600px){
+    header{
+        flex-direction: column;
+        padding: 1rem;
+    }
+    main{
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+    .right{
+        display: none;
+    }
+    .left{
+        width: 100%;
     }
 }
