@@ -1,7 +1,8 @@
 :root{
-    --font-size-basic: 1.5rem
+    --font-size-basic: 1.5rem;
     --color-white: #fff;
-    --color-link: #2337f1;
+    --color-link: #4d5af2;
+    --color-gray: #514f4f;
 }
 
 *{
@@ -20,7 +21,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 3px 2px #514f4f;
+    box-shadow: 0 3px 2px var(--color-gray);
     padding: 1rem 2rem;
 }
 
@@ -56,7 +57,7 @@ main{
 }
 
 .right{
-    background-color: #a08047;
+    background-color: var(--color-gray);
 }
 .right img{
     width: 100%;
@@ -69,7 +70,7 @@ main{
     padding: 2rem;
     margin: 1rem;
     font-family: calibri;
-    color: white;
+    color:var(--color-white);
     font-weight: 500;
     text-shadow: 0 0 10px rgb(54, 49, 49);
 }
@@ -81,8 +82,8 @@ main{
 }
 
 .btn{
-    background-color: #fff;
-    border: 1px solid #9d9999;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-gray);
     text-decoration: none;
     padding:.4rem 1rem;
     font-family: calibri;
@@ -98,16 +99,16 @@ main{
 }
 
 .btn:hover{
-    background-color: #2a41e9;
-    color: white;
-    border: 1px solid #1726b0;
+    background-color:var(--color-link);
+    color: var(--color-white);
+    border: 1px solid var(--color-link);
 }
 
 .form-card{
-    background-color: #fff;
+    background-color: var(--color-white);
     padding: 2.5rem;
     border-radius: .5rem;
-    box-shadow: 0 1px 3px #514f4f;
+    box-shadow: 0 1px 3px var(--color-gray);
 }
 
 .form-card h2{
@@ -124,7 +125,7 @@ main{
 }
 
 .form-control label{
-    color: #1c31f4;
+    color: var(--color-link);
     font-size: 1.2rem;
     font-family: monospace;
 }
@@ -149,8 +150,8 @@ hr{
 }
 
 .btn-login{
-    background-color: #2a41e9;
-    color: white;
+    background-color: var(--color-link);
+    color: var(--color-white);
     padding: .75rem;
 }
 .btn-login:hover{
@@ -158,7 +159,20 @@ hr{
 }
 
 .text-link{
-    color: #2337f1;
+    color: var(--color-link);
     font-family: monospace;
     font-size: 1.2rem;
+}
+
+/* media query */
+@media screen and (max-width: 768px){
+    main{
+        flex-direction: column-reverse;
+    }
+    .left, .right{
+        width: 100%;
+    }
+    .left{
+        padding: 1rem;
+    }
 }
