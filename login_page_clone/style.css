@@ -1,3 +1,9 @@
+:root{
+    --font-size-basic: 1.5rem
+    --color-white: #fff;
+    --color-link: #2337f1;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -10,7 +16,7 @@ body{
 }
 
 header{
-    background-color: white;
+    background-color: var(--color-white);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -40,9 +46,6 @@ header img{
 
 main{
     display: flex;
-    min-height: 100vh;
-    justify-content: flex-start;
-    align-items: stretch;
 }
 
 .left, .right{
@@ -74,7 +77,7 @@ main{
     font-size: 2.5rem;
 }
 .right .content h4{
-    font-size: 1.5rem;
+    font-size: var(--font-size-basic);
 }
 
 .btn{
@@ -89,7 +92,7 @@ main{
     min-width: 100%;
     border-radius: .5rem;
     margin-bottom: 1rem;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: bold;
     text-shadow: none;
 }
@@ -98,4 +101,64 @@ main{
     background-color: #2a41e9;
     color: white;
     border: 1px solid #1726b0;
+}
+
+.form-card{
+    background-color: #fff;
+    padding: 2.5rem;
+    border-radius: .5rem;
+    box-shadow: 0 1px 3px #514f4f;
+}
+
+.form-card h2{
+    font-size: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    margin-bottom: var(--font-size-basic);
+}
+
+.form-control{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: var(--font-size-basic);
+}
+
+.form-control label{
+    color: #1c31f4;
+    font-size: 1.2rem;
+    font-family: monospace;
+}
+
+.form-control label span{
+    color: rgb(248, 39, 39);
+    font-weight: bold;
+}
+
+.form-control input{
+    padding: .5rem 1rem;
+    border: 1px solid #9d9999;
+    border-radius: .5rem;
+    font-size: 1.4rem;
+    font-family: calibri;
+    margin-top: .5rem;
+}
+
+hr{
+    margin: 1.5rem 0;
+    border: 1px solid #e6e0e0;
+}
+
+.btn-login{
+    background-color: #2a41e9;
+    color: white;
+    padding: .75rem;
+}
+.btn-login:hover{
+    background-color: #467cf2;
+}
+
+.text-link{
+    color: #2337f1;
+    font-family: monospace;
+    font-size: 1.2rem;
 }
