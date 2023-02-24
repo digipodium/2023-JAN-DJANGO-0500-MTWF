@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Demo</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url('bg.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .box {
+            height: 10rem;
+            background-image: linear-gradient(rgb(106, 106, 247), rgb(72, 72, 243));
+            display: grid;
+            place-content: center;
+            color: white;
+            position: relative;
+        }
+
+        button,
+        input {
+            padding: .5rem 1rem;
+            border-radius: .5rem;
+            border: none;
+        }
+
+        input {
+            outline: none;
+            background-color: rgb(158, 97, 238);
+            color: white;
+        }
+
+        input::placeholder {
+            color: white;
+        }
+
+        #btn-cls {
+            background: white;
+            border: 1px black solid;
+            width: 2rem;
+            height: 2rem;
+            padding: 0;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: .5rem;
+            position: absolute;
+            inset: auto 1rem -1rem auto;
+        }
+
+        #cls_login{
+            background: white;
+            border:none;
+            width: 3rem;
+            height: 3rem;
+            box-shadow: 0 0 5px #333;
+            padding: 0;
+            color: rgb(0, 0, 0);
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 100%;
+            position: absolute;
+            inset: -1rem -1rem auto auto; 
+        }
+
+        .modal {
+            position: fixed;
+            inset: 50% auto auto 50%;
+            transform: translate(-50%, -50%);
+            background: rgb(255, 255, 255);
+            border-radius: .5rem;
+            display: none;
+        }
+
+        .modal form {
+            display: grid;
+            padding: 5rem;
+            gap: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h2>Welcome to Wakanda</h2>
+        <button class="show_login">Login</button>
+        <button id="btn-cls">❌</button>
+    </div>
+
+    <div class="modal">
+        <form>
+            <input type="text" placeholder="Email">
+            <input type="text" placeholder="Password">
+            <button>Login</button>
+            <button id="cls_login">&Cross;</button>
+        </form>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+
+    <script>
+        $(function () {
+            $('#btn-cls').click(() => {
+                $('.box').slideUp(300)
+            })
+            $('.show_login').click(() => {
+                $('.modal').slideToggle(300)
+            })
+            $('#cls_login').click((e) => {
+                e.preventDefault()
+                $('.modal').slideUp(300)
+            })
+        });
+    </script>
+</body>
+
+</html>
